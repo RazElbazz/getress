@@ -38,6 +38,7 @@ class GetressApp():
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_sock:
             # bind socket to ip and port
             server_sock.bind(address=(ip, port))
+            server_sock.listen()
 
             # start listening to clients
             while True:
